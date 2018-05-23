@@ -288,7 +288,7 @@ async def complete(ctx, *, member : discord.Member=None):
 				return
 
 			embed = discord.Embed(colour = discord.Colour(0xA522B3))
-			embed.description = f"{memtion} now have your **gym badge** for reaching/finishing your gym!"
+			embed.description = f"{mention} now have your **gym badge** for reaching/finishing your gym!"
 			await ctx.send(embed = embed)
 
 		else:

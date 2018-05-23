@@ -242,7 +242,7 @@ async def complete(ctx, *, member : discord.Member=None):
 	laverre2 = [385419569558323202]
 
 	elite = [220231135949619200, 247166156467732482]
-	elite.lead = [385419569558323202] 
+	elitelead = [385419569558323202] 
 
 	if not member:
 		await ctx.send(f"Please **mention** the person who **reached/finished** your gym !")

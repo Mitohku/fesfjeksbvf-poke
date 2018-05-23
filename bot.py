@@ -202,6 +202,7 @@ async def game_clear(self, *, game = None):
 async def complete(ctx, *, member : discord.Member=None):
 
 	author = ctx.message.author.mention
+	author2 = ctx.author
 	mention = member.mention
 
 	gym = [385419569558323202, 307219837648764928, 220231135949619200]
@@ -248,40 +249,40 @@ async def complete(ctx, *, member : discord.Member=None):
 		await ctx.send(f"Please **mention** the person who **reached/finished** your gym !")
 
 	else:
-		if author.id in gym:
-			if author.id in pewter:
+		if author2.id in gym:
+			if author2.id in pewter:
 				pewter2.append(member.id)
-			elif author.id in cerulean:
+			elif author2.id in cerulean:
 				cerulean2.append(member.id)
-			elif author.id in vermilion:
+			elif author2.id in vermilion:
 				vermilion2.append(member.id)
-			elif author.id in celadon:
+			elif author2.id in celadon:
 				celadon2.append(member.id)
-			elif author.id in fuschia:
+			elif author2.id in fuschia:
 				fuschia2.append(member.id)
-			elif author.id in saffron:
+			elif author2.id in saffron:
 				saffron2.append(member.id)
-			elif author.id in cinnabar:
+			elif author2.id in cinnabar:
 				cinnabar2.append(member.id)
-			elif author.id in viridian:
+			elif author2.id in viridian:
 				viridian2.append(member.id)
-			elif author.id in violet:
+			elif author2.id in violet:
 				violet2.append(member.id)
-			elif author.id in azalea:
+			elif author2.id in azalea:
 				azalea2.append(member.id)
-			elif author.id in goldenrod:
+			elif author2.id in goldenrod:
 				goldenrod2.append(member.id)
-			elif author.id in ecruteak:
+			elif author2.id in ecruteak:
 				ecruteak2.append(member.id)
-			elif author.id in cianwood:
+			elif author2.id in cianwood:
 				cianwood2.append(member.id)
-			elif author.id in olivine:
+			elif author2.id in olivine:
 				olivine2.append(member.id)
-			elif author.id in mahogany:
+			elif author2.id in mahogany:
 				mahogany2.append(member.id)
-			elif author.id in blackthorn:
+			elif author2.id in blackthorn:
 				blackthorn2.append(member.id)
-			elif author.id in laverre:
+			elif author2.id in laverre:
 				laverre2.append(member.id)
 			else:
 				return

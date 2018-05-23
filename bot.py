@@ -223,23 +223,23 @@ async def complete(ctx, *, member : discord.Member=None):
 	blackthorn = []
 	laverre = [385419569558323202]
 
-	pewter2 = [385419569558323202]
-	cerulean2 = [385419569558323202]
-	vermilion2 = [385419569558323202]
-	celadon2 = [385419569558323202]
-	fuschia2 = [385419569558323202]
-	saffron2 = [385419569558323202]
-	cinnabar2 = [385419569558323202]
-	viridian2 = [385419569558323202]
-	violet2 = [385419569558323202]
-	azalea2 = [385419569558323202]
-	goldenrod2 = [385419569558323202]
-	ecruteak2 = [385419569558323202]
-	cianwood2 = [385419569558323202]
-	olivine2 = [385419569558323202]
-	mahogany2 = [385419569558323202]
-	blackthorn2 = [385419569558323202]
-	laverre2 = [385419569558323202]
+	pewter2 = []
+	cerulean2 = []
+	vermilion2 = []
+	celadon2 = []
+	fuschia2 = []
+	saffron2 = []
+	cinnabar2 = []
+	viridian2 = []
+	violet2 = []
+	azalea2 = []
+	goldenrod2 = []
+	ecruteak2 = []
+	cianwood2 = []
+	olivine2 = []
+	mahogany2 = []
+	blackthorn2 = []
+	laverre2 = []
 
 	elite = [220231135949619200, 247166156467732482]
 	elitelead = [385419569558323202] 
@@ -250,39 +250,39 @@ async def complete(ctx, *, member : discord.Member=None):
 	else:
 		if author in gym:
 			if author in pewter:
-				await pewter2.append(member.id)
+				pewter2.append(member.id)
 			elif author in cerulean:
-				await cerulean2.append(member.id)
+				cerulean2.append(member.id)
 			elif author in vermilion:
-				await vermilion2.append(member.id)
+				vermilion2.append(member.id)
 			elif author in celadon:
-				await celadon2.append(member.id)
+				celadon2.append(member.id)
 			elif author in fuschia:
-				await fuschia2.append(member.id)
+				fuschia2.append(member.id)
 			elif author in saffron:
-				await saffron2.append(member.id)
+				saffron2.append(member.id)
 			elif author in cinnabar:
-				await cinnabar2.append(member.id)
+				cinnabar2.append(member.id)
 			elif author in viridian:
-				await viridian2.append(member.id)
+				viridian2.append(member.id)
 			elif author in violet:
-				await violet2.append(member.id)
+				violet2.append(member.id)
 			elif author in azalea:
-				await azalea2.append(member.id)
+				azalea2.append(member.id)
 			elif author in goldenrod:
-				await goldenrod2.append(member.id)
+				goldenrod2.append(member.id)
 			elif author in ecruteak:
-				await ecruteak2.append(member.id)
+				ecruteak2.append(member.id)
 			elif author in cianwood:
-				await cianwood2.append(member.id)
+				cianwood2.append(member.id)
 			elif author in olivine:
-				await olivine2.append(member.id)
+				olivine2.append(member.id)
 			elif author in mahogany:
-				await mahogany2.append(member.id)
+				mahogany2.append(member.id)
 			elif author in blackthorn:
-				await blackthorn2.append(member.id)
+				blackthorn2.append(member.id)
 			elif author in laverre:
-				await laverre2.append(member.id)
+				laverre2.append(member.id)
 			else:
 				return
 

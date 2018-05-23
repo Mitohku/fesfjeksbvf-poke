@@ -248,40 +248,40 @@ async def complete(ctx, *, member : discord.Member=None):
 		await ctx.send(f"Please **mention** the person who **reached/finished** your gym !")
 
 	else:
-		if author in gym:
-			if author in pewter:
+		if author.id in gym:
+			if author.id in pewter:
 				pewter2.append(member.id)
-			elif author in cerulean:
+			elif author.id in cerulean:
 				cerulean2.append(member.id)
-			elif author in vermilion:
+			elif author.id in vermilion:
 				vermilion2.append(member.id)
-			elif author in celadon:
+			elif author.id in celadon:
 				celadon2.append(member.id)
-			elif author in fuschia:
+			elif author.id in fuschia:
 				fuschia2.append(member.id)
-			elif author in saffron:
+			elif author.id in saffron:
 				saffron2.append(member.id)
-			elif author in cinnabar:
+			elif author.id in cinnabar:
 				cinnabar2.append(member.id)
-			elif author in viridian:
+			elif author.id in viridian:
 				viridian2.append(member.id)
-			elif author in violet:
+			elif author.id in violet:
 				violet2.append(member.id)
-			elif author in azalea:
+			elif author.id in azalea:
 				azalea2.append(member.id)
-			elif author in goldenrod:
+			elif author.id in goldenrod:
 				goldenrod2.append(member.id)
-			elif author in ecruteak:
+			elif author.id in ecruteak:
 				ecruteak2.append(member.id)
-			elif author in cianwood:
+			elif author.id in cianwood:
 				cianwood2.append(member.id)
-			elif author in olivine:
+			elif author.id in olivine:
 				olivine2.append(member.id)
-			elif author in mahogany:
+			elif author.id in mahogany:
 				mahogany2.append(member.id)
-			elif author in blackthorn:
+			elif author.id in blackthorn:
 				blackthorn2.append(member.id)
-			elif author in laverre:
+			elif author.id in laverre:
 				laverre2.append(member.id)
 			else:
 				return

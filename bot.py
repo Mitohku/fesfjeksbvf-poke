@@ -307,20 +307,20 @@ async def complete(ctx, *, member : discord.Member=None):
 @bot.command(aliases = ['badge', 'profile'])
 async def badges(ctx, *, member: discord.Member = None):
 
-    if member is None:
-        member = ctx.author
+	if member is None:
+		member = ctx.author
 
-    if member.avatar_url[54:].startswith('a_'):
-        avi = 'https://cdn.discordapp.com/avatars/' + member.avatar_url[35:-10]
-    else:
-        avi = member.avatar_url
+	if member.avatar_url[54:].startswith('a_'):
+		avi = 'https://cdn.discordapp.com/avatars/' + member.avatar_url[35:-10]
+	else:
+		avi = member.avatar_url
 
-    if avi:
-        e.set_thumbnail(url = avi)
-        e.set_author(name = str(member), icon_url = avi)
-    else:
-        e.set_thumbnail(url = member.default_avatar_url)
-        e.set_author(name = str(member), icon_url = member.default_avatar_url)
+	if avi:
+		e.set_thumbnail(url = avi)
+		e.set_author(name = str(member), icon_url = avi)
+	else:
+		e.set_thumbnail(url = member.default_avatar_url)
+		e.set_author(name = str(member), icon_url = member.default_avatar_url)
 		
 	if author.id in gym:
 		if author.id in elite:
@@ -368,33 +368,33 @@ async def badges(ctx, *, member: discord.Member = None):
 			features16 = ":one::six:"
 		else:
 			features = ":one:"
-    else:
-        features = "ㅤ"
-        features1 = "ㅤ"
-        features2 = "ㅤ"
-        features3 = "ㅤ"
-        features4 = "ㅤ"
-        features5 = "ㅤ"
-        features6 = "ㅤ"
-        features7 = "ㅤ"
-        features8 = "ㅤ"
-        features9 = "ㅤ"
-        features10 = "ㅤ"
-        features11 = "ㅤ"
-        features12 = "ㅤ"
-        features13 = "ㅤ"
-        features14 = "ㅤ"
-        features15 = "ㅤ"
-        features16 = "ㅤ"
-        features17 = "ㅤ"
+	else:
+		features = "ㅤ"
+		features1 = "ㅤ"
+		features2 = "ㅤ"
+		features3 = "ㅤ"
+		features4 = "ㅤ"
+		features5 = "ㅤ"
+		features6 = "ㅤ"
+		features7 = "ㅤ"
+		features8 = "ㅤ"
+		features9 = "ㅤ"
+		features10 = "ㅤ"
+		features11 = "ㅤ"
+		features12 = "ㅤ"
+		features13 = "ㅤ"
+		features14 = "ㅤ"
+		features15 = "ㅤ"
+		features16 = "ㅤ"
+		features17 = "ㅤ"
 
-    e.set_footer(text = f"Member since: {member.joined_at.__format__('%d %b %Y at %H:%M:%S')}")#.timestamp = member.joined_at
-    e.add_field(name = 'User ID', value = member.id)
-    e.add_field(name = 'Client Status', value = status_name)
-    e.add_field(name = 'Account created at', value = member.created_at.__format__('Date: **%d %b %Y**\nTime: **%H:%M:%S**'))
-    e.add_field(name = 'Pokébadges', value = f"{features}ㅤ**|**ㅤ{features1}ㅤ**|**ㅤ{features2}\n{features3}ㅤ**|**ㅤ{features4}ㅤ**|**ㅤ{features5}\n{features6}ㅤ**|**ㅤ{features7}ㅤ**|**ㅤ{features8}\n{features9}ㅤ**|**ㅤ{features10}ㅤ**|**ㅤ{features11}\n{features12}ㅤ**|**ㅤ{features13}ㅤ**|**ㅤ{features14}\nㅤㅤ{features15}ㅤ**|**ㅤ{features16}\nㅤㅤㅤㅤㅤ{features17}")
+	e.set_footer(text = f"Member since: {member.joined_at.__format__('%d %b %Y at %H:%M:%S')}")#.timestamp = member.joined_at
+	e.add_field(name = 'User ID', value = member.id)
+	e.add_field(name = 'Client Status', value = status_name)
+	e.add_field(name = 'Account created at', value = member.created_at.__format__('Date: **%d %b %Y**\nTime: **%H:%M:%S**'))
+	e.add_field(name = 'Pokébadges', value = f"{features}ㅤ**|**ㅤ{features1}ㅤ**|**ㅤ{features2}\n{features3}ㅤ**|**ㅤ{features4}ㅤ**|**ㅤ{features5}\n{features6}ㅤ**|**ㅤ{features7}ㅤ**|**ㅤ{features8}\n{features9}ㅤ**|**ㅤ{features10}ㅤ**|**ㅤ{features11}\n{features12}ㅤ**|**ㅤ{features13}ㅤ**|**ㅤ{features14}\nㅤㅤ{features15}ㅤ**|**ㅤ{features16}\nㅤㅤㅤㅤㅤ{features17}")
 
-    await ctx.send(embed=e)
+	await ctx.send(embed=e)
 
 ###################################################################################
 

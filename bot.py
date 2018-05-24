@@ -322,49 +322,49 @@ async def badges(ctx, *, member: discord.Member = None):
 		e.set_thumbnail(url = member.default_avatar_url)
 		e.set_author(name = str(member), icon_url = member.default_avatar_url)
 		
-	if author.id in gym:
-		if author.id in elite:
-			if author.id in elitelead:
+	if member.id in gym:
+		if member.id in elite:
+			if member.id in elitelead:
 				features17 = "Lead"
 			else:
 				features17 = "Elite"
-		elif author.id in elitelead:
+		elif member.id in elitelead:
 			features17 = "Lead"
 		else:
 			features17 = "Gym"
 		
-	if author.id in bot.pewter2:
-		if author.id in bot.cerulean2:
+	if member.id in bot.pewter2:
+		if member.id in bot.cerulean2:
 			features1 = ":one:"
-		elif author.id in bot.vermilion2:
+		elif member.id in bot.vermilion2:
 			features2 = ":two:"
-		elif author.id in bot.celadon2:
+		elif member.id in bot.celadon2:
 			features3 = ":three:"
-		elif author.id in bot.fuschia2:
+		elif member.id in bot.fuschia2:
 			features4 = ":four:"
-		elif author.id in bot.saffron2:
+		elif member.id in bot.saffron2:
 			features5 = ":five:"
-		elif author.id in bot.cinnabar2:
+		elif member.id in bot.cinnabar2:
 			features6 = ":six:"
-		elif author.id in bot.viridian2:
+		elif member.id in bot.viridian2:
 			features7 = ":seven:"
-		elif author.id in bot.violet2:
+		elif member.id in bot.violet2:
 			features8 = ":eight:"
-		elif author.id in bot.azalea2:
+		elif member.id in bot.azalea2:
 			features9 = ":nine:"
-		elif author.id in bot.goldenrod2:
+		elif member.id in bot.goldenrod2:
 			features10 = ":one::zero:"
-		elif author.id in bot.ecruteak2:
+		elif member.id in bot.ecruteak2:
 			features11 = ":one::one:"
-		elif author.id in bot.cianwood2:
+		elif member.id in bot.cianwood2:
 			features12 = ":one::two:"
-		elif author.id in bot.olivine2:
+		elif member.id in bot.olivine2:
 			features13 = ":one::three:"
-		elif author.id in bot.mahogany2:
+		elif member.id in bot.mahogany2:
 			features14 = ":one::four:"
-		elif author.id in bot.blackthorn2:
+		elif member.id in bot.blackthorn2:
 			features15 = ":one::five:"
-		elif author.id in bot.laverre2:
+		elif member.id in bot.laverre2:
 			features16 = ":one::six:"
 		else:
 			features = ":one:"

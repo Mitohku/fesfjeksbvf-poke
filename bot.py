@@ -21,6 +21,46 @@ bot = commands.Bot(command_prefix, description = description)
 bot.remove_command('help')
 tu = datetime.datetime.now()
 
+gym = [385419569558323202, 307219837648764928, 220231135949619200]
+pewter = []
+cerulean = []
+vermilion = []
+celadon = []
+fuschia = []
+saffron = []
+cinnabar = []
+viridian = []
+violet = [220231135949619200]
+azalea = []
+goldenrod = []
+ecruteak = [247166156467732482]
+cianwood = []
+olivine = [307219837648764928]
+mahogany = []
+blackthorn = []
+laverre = [385419569558323202]
+
+pewter2 = []
+cerulean2 = []
+vermilion2 = []
+celadon2 = []
+fuschia2 = []
+saffron2 = []
+cinnabar2 = []
+viridian2 = []
+violet2 = []
+azalea2 = []
+goldenrod2 = []
+ecruteak2 = []
+cianwood2 = []
+olivine2 = []
+mahogany2 = []
+blackthorn2 = []
+laverre2 = []
+
+elite = [220231135949619200, 247166156467732482]
+elitelead = [385419569558323202] 
+	
 @bot.event
 async def on_ready():
     print('Logged in as')
@@ -205,85 +245,45 @@ async def complete(ctx, *, member : discord.Member=None):
 	author2 = ctx.author
 	mention = member.mention
 
-	bot.gym = [385419569558323202, 307219837648764928, 220231135949619200]
-	pewter = []
-	cerulean = []
-	vermilion = []
-	celadon = []
-	fuschia = []
-	saffron = []
-	cinnabar = []
-	viridian = []
-	violet = [220231135949619200]
-	azalea = []
-	goldenrod = []
-	ecruteak = [247166156467732482]
-	cianwood = []
-	olivine = [307219837648764928]
-	mahogany = []
-	blackthorn = []
-	laverre = [385419569558323202]
-
-	bot.pewter2 = []
-	bot.cerulean2 = []
-	bot.vermilion2 = []
-	bot.celadon2 = []
-	bot.fuschia2 = []
-	bot.saffron2 = []
-	bot.cinnabar2 = []
-	bot.viridian2 = []
-	bot.violet2 = []
-	bot.azalea2 = []
-	bot.goldenrod2 = []
-	bot.ecruteak2 = []
-	bot.cianwood2 = []
-	bot.olivine2 = []
-	bot.mahogany2 = []
-	bot.blackthorn2 = []
-	bot.laverre2 = []
-
-	bot.elite = [220231135949619200, 247166156467732482]
-	bot.elitelead = [385419569558323202] 
-
 	if not member:
 		await ctx.send(f"Please **mention** the person who **reached/finished** your gym !")
 
 	else:
-		if author2.id in bot.gym:
+		if author2.id in gym:
 			if author2.id in pewter:
-				await bot.pewter2.append(member.id)
+				await pewter2.append(member.id)
 			elif author2.id in cerulean:
-				await bot.cerulean2.append(member.id)
+				await cerulean2.append(member.id)
 			elif author2.id in vermilion:
-				await bot.vermilion2.append(member.id)
+				await vermilion2.append(member.id)
 			elif author2.id in celadon:
-				await bot.celadon2.append(member.id)
+				await celadon2.append(member.id)
 			elif author2.id in fuschia:
-				await bot.uschia2.append(member.id)
+				await uschia2.append(member.id)
 			elif author2.id in saffron:
-				await bot.saffron2.append(member.id)
+				await saffron2.append(member.id)
 			elif author2.id in cinnabar:
-				await bot.cinnabar2.append(member.id)
+				await cinnabar2.append(member.id)
 			elif author2.id in viridian:
-				await bot.viridian2.append(member.id)
+				await viridian2.append(member.id)
 			elif author2.id in violet:
-				await bot.violet2.append(member.id)
+				await violet2.append(member.id)
 			elif author2.id in azalea:
-				await bot.azalea2.append(member.id)
+				await azalea2.append(member.id)
 			elif author2.id in goldenrod:
-				await bot.goldenrod2.append(member.id)
+				await goldenrod2.append(member.id)
 			elif author2.id in ecruteak:
-				await bot.ecruteak2.append(member.id)
+				await ecruteak2.append(member.id)
 			elif author2.id in cianwood:
-				await bot.cianwood2.append(member.id)
+				await cianwood2.append(member.id)
 			elif author2.id in olivine:
-				await bot.olivine2.append(member.id)
+				await olivine2.append(member.id)
 			elif author2.id in mahogany:
-				await bot.mahogany2.append(member.id)
+				await mahogany2.append(member.id)
 			elif author2.id in blackthorn:
-				await bot.blackthorn2.append(member.id)
+				await blackthorn2.append(member.id)
 			elif author2.id in laverre:
-				await bot.laverre2.append(member.id)
+				await laverre2.append(member.id)
 			else:
 				return
 
@@ -324,49 +324,49 @@ async def badges(ctx, *, member: discord.Member = None):
 		e.set_thumbnail(url = member.default_avatar_url)
 		e.set_author(name = str(member), icon_url = member.default_avatar_url)
 		
-	if member.id in bot.gym:
-		if member.id in bot.elite:
-			if member.id in bot.elitelead:
+	if member.id in gym:
+		if member.id in elite:
+			if member.id in elitelead:
 				features17 = "Lead"
 			else:
 				features17 = "Elite"
-		elif member.id in bot.elitelead:
+		elif member.id in elitelead:
 			features17 = "Lead"
 		else:
 			features17 = "Gym"
 		
-	if member.id in bot.pewter2:
-		if member.id in bot.cerulean2:
+	if member.id in pewter2:
+		if member.id in cerulean2:
 			features1 = ":one:"
-		elif member.id in bot.vermilion2:
+		elif member.id in vermilion2:
 			features2 = ":two:"
-		elif member.id in bot.celadon2:
+		elif member.id in celadon2:
 			features3 = ":three:"
-		elif member.id in bot.fuschia2:
+		elif member.id in fuschia2:
 			features4 = ":four:"
-		elif member.id in bot.saffron2:
+		elif member.id in saffron2:
 			features5 = ":five:"
-		elif member.id in bot.cinnabar2:
+		elif member.id in cinnabar2:
 			features6 = ":six:"
-		elif member.id in bot.viridian2:
+		elif member.id in viridian2:
 			features7 = ":seven:"
-		elif member.id in bot.violet2:
+		elif member.id in violet2:
 			features8 = ":eight:"
-		elif member.id in bot.azalea2:
+		elif member.id in azalea2:
 			features9 = ":nine:"
-		elif member.id in bot.goldenrod2:
+		elif member.id in goldenrod2:
 			features10 = ":one::zero:"
-		elif member.id in bot.ecruteak2:
+		elif member.id in ecruteak2:
 			features11 = ":one::one:"
-		elif member.id in bot.cianwood2:
+		elif member.id in cianwood2:
 			features12 = ":one::two:"
-		elif member.id in bot.olivine2:
+		elif member.id in olivine2:
 			features13 = ":one::three:"
-		elif member.id in bot.mahogany2:
+		elif member.id in mahogany2:
 			features14 = ":one::four:"
-		elif member.id in bot.blackthorn2:
+		elif member.id in blackthorn2:
 			features15 = ":one::five:"
-		elif member.id in bot.laverre2:
+		elif member.id in laverre2:
 			features16 = ":one::six:"
 		else:
 			features = ":one:"

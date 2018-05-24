@@ -307,6 +307,8 @@ async def complete(ctx, *, member : discord.Member=None):
 @bot.command(aliases = ['badge', 'profile'])
 async def badges(ctx, *, member: discord.Member = None):
 
+	e = discord.Embed(colour = discord.Colour(0xA522B3))
+	
 	if member is None:
 		member = ctx.author
 
@@ -388,7 +390,6 @@ async def badges(ctx, *, member: discord.Member = None):
 		features16 = "ㅤ"
 		features17 = "ㅤ"
 
-	e = discord.Embed(colour = discord.Colour(0xA522B3))
 	e.set_footer(text = f"Member since: {member.joined_at.__format__('%d %b %Y at %H:%M:%S')}")#.timestamp = member.joined_at
 	e.add_field(name = 'User ID', value = member.id)
 	e.add_field(name = 'Client Status', value = status_name)

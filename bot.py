@@ -249,7 +249,7 @@ async def complete(ctx, *, member : discord.Member=None):
 		await ctx.send(f"Please **mention** the person who **reached/finished** your gym !")
 
 	else:
-		if author2.id in gym:
+		if author2.id in bot.gym:
 			if author2.id in pewter:
 				await bot.pewter2.append(member.id)
 			elif author2.id in cerulean:

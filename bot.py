@@ -324,13 +324,13 @@ async def badges(ctx, *, member: discord.Member = None):
 		e.set_thumbnail(url = member.default_avatar_url)
 		e.set_author(name = str(member), icon_url = member.default_avatar_url)
 		
-	if member.id in gym:
-		if member.id in elite:
-			if member.id in elitelead:
+	if member.id in bot.gym:
+		if member.id in bot.elite:
+			if member.id in bot.elitelead:
 				features17 = "Lead"
 			else:
 				features17 = "Elite"
-		elif member.id in elitelead:
+		elif member.id in bot.elitelead:
 			features17 = "Lead"
 		else:
 			features17 = "Gym"

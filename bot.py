@@ -395,14 +395,46 @@ async def badges(ctx, *, member: discord.Member = None):
 
 	if member.id in gym:
 		if member.id in elite:
-			if member.id in elitelead:
-				features17 = "Lead"
-			else:
-				features17 = "Elite"
+			features17 = "Elite Four"
 		elif member.id in elitelead:
-			features17 = "Lead"
+			features17 = "Elite Master"
 		else:
-			features17 = "Gym"
+			if member.id in pewter:
+				features17 = "Gym Leader (Pewter - Rock)"
+			elif member.id in cerulean:
+				features17 = "Gym Leader (Cerulean - Water)"
+			elif member.id in vermilion:
+				features17 = "Gym Leader (Vermilion - Electrik)"
+			elif member.id in celadon:
+				features17 = "Gym Leader (Celadon - Grass)"
+			elif member.id in fuschia:
+				features17 = "Gym Leader (Fuchsia - Poison)"
+			elif member.id in saffron:
+				features17 = "Gym Leader (Saffron - Psychic)"
+			elif member.id in cinnabar:
+				features17 = "Gym Leader (Cinnabar - Fire)"
+			elif member.id in viridian:
+				features17 = "Gym Leader (Viridian - Ground)"
+			elif member.id in violet:
+				features17 = "Gym Leader (Violet - Flying)"
+			elif member.id in azalea:
+				features17 = "Gym Leader (Azalea - Bug)"
+			elif member.id in goldenrod:
+				features17 = "Gym Leader (Goldenrod - Normal)"
+			elif member.id in ecruteak:
+				features17 = "Gym Leader (Ecruteak - Ghost)"
+			elif member.id in cianwood:
+				features17 = "Gym Leader (Cianwood - Fighting)"
+			elif member.id in olivine:
+				features17 = "Gym Leader (Olivine - Steel)"
+			elif member.id in mahogany:
+				features17 = "Gym Leader (Mahogany - Ice)"
+			elif member.id in blackthorn:
+				features17 = "Gym Leader (Blackthorn - Dragon)"
+			elif member.id in laverre:
+				features17 = "Gym Leader (Laverre - Fairy)"
+			else:
+				features17 = "Gym Leader"
 
 	if member.id in pewter2:
 		features = "<:Pewter:449610408060518410>"
@@ -519,6 +551,7 @@ async def badges(ctx, *, member: discord.Member = None):
 	e.add_field(name = 'User ID', value = member.id)
 	e.add_field(name = b1, value = b2, inline=True)
 	e.add_field(name = "League Status", value = league)
+	e.add_field(name = "Social Status/Role", value = features17, inline=True)
 	e.add_field(name = 'Pokébadges', value = f"{features}ㅤ{features1}ㅤ{features2}ㅤ{features3}ㅤ{features4}ㅤ{features5}\n\n{features6}ㅤ{features7}ㅤ{features8}ㅤ{features9}ㅤ{features10}ㅤ{features11}\n\n{features12}ㅤ{features13}ㅤ{features14}ㅤ{features15}ㅤ{features16}", inline = True)
 
 	await ctx.send(embed=e)

@@ -255,39 +255,39 @@ async def complete(ctx, *, member : discord.Member=None):
 	else:
 		if author2.id in gym:
 			if author2.id in pewter:
-				await pewter2.append(member.id)
+				pewter2.append(member.id)
 			elif author2.id in cerulean:
-				await cerulean2.append(member.id)
+				cerulean2.append(member.id)
 			elif author2.id in vermilion:
-				await vermilion2.append(member.id)
+				vermilion2.append(member.id)
 			elif author2.id in celadon:
-				await celadon2.append(member.id)
+				celadon2.append(member.id)
 			elif author2.id in fuschia:
-				await uschia2.append(member.id)
+				fuschia2.append(member.id)
 			elif author2.id in saffron:
-				await saffron2.append(member.id)
+				saffron2.append(member.id)
 			elif author2.id in cinnabar:
-				await cinnabar2.append(member.id)
+				cinnabar2.append(member.id)
 			elif author2.id in viridian:
-				await viridian2.append(member.id)
+				viridian2.append(member.id)
 			elif author2.id in violet:
-				await violet2.append(member.id)
+				violet2.append(member.id)
 			elif author2.id in azalea:
-				await azalea2.append(member.id)
+				azalea2.append(member.id)
 			elif author2.id in goldenrod:
-				await goldenrod2.append(member.id)
+				goldenrod2.append(member.id)
 			elif author2.id in ecruteak:
-				await ecruteak2.append(member.id)
+				ecruteak2.append(member.id)
 			elif author2.id in cianwood:
-				await cianwood2.append(member.id)
+				cianwood2.append(member.id)
 			elif author2.id in olivine:
-				await olivine2.append(member.id)
+				olivine2.append(member.id)
 			elif author2.id in mahogany:
-				await mahogany2.append(member.id)
+				mahogany2.append(member.id)
 			elif author2.id in blackthorn:
-				await blackthorn2.append(member.id)
+				blackthorn2.append(member.id)
 			elif author2.id in laverre:
-				await laverre2.append(member.id)
+				laverre2.append(member.id)
 			else:
 				return
 
@@ -317,7 +317,7 @@ async def leagueaccess(ctx, *, member: discord.Member = None):
 	role = discord.utils.get(guild.roles, name='League Access')
 
 	if author2.id in laverre2:
-		await started.append(author2.id)
+		started.append(author2.id)
 		await member.add_roles(role)
 
 ###################################################################################
@@ -329,7 +329,7 @@ async def masterfight(ctx, *, member: discord.Member = None):
 	author2 = ctx.author
 
 	if author2.id in elitelead:
-		await master.append(member.id)
+		master.append(member.id)
 
 ###################################################################################
 
@@ -340,7 +340,7 @@ async def leaguecompleted(ctx, *, member: discord.Member = None):
 	author2 = ctx.author
 
 	if author2.id in elitelead:
-		await comp.append(member.id)
+		comp.append(member.id)
 
 ###################################################################################
 ###################################################################################

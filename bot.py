@@ -410,6 +410,7 @@ async def badges(ctx, *, member: discord.Member = None):
 																			features16 = "ㅤㅤ"
 	b1 = "ㅤ"
 	b2 = "ㅤ"
+	league = "ㅤ"
 
 	if member.id in laverre2:
 		b1 = "No Badges Left!"
@@ -449,12 +450,23 @@ async def badges(ctx, *, member: discord.Member = None):
 																	if member.id in blackthorn2:
 																		b2 = "1 badge left"
 
+	if member.id in laverre2:
+		if member.id in started:
+			league = "<:Elite_4_Fight:449629015872110592>"
+			if member.id in master:
+				league = "<:Elite_Master_Fight:449628615156564015>"
+				if member.id in complete:
+					league = "<:Completed:449628616284831744>"
+		else:
+			league = "<:Didnt_Start:449628615999488000>"
+
 
 	e.set_footer(text = f"Member since: {member.joined_at.__format__('%d %b %Y at %H:%M:%S')}")#.timestamp = member.joined_at
 	e.add_field(name = 'Account created at', value = member.created_at.__format__('Date: **%d %b %Y**\nTime: **%H:%M:%S**\nㅤ'))
 	e.add_field(name = 'User ID', value = member.id)
 	e.add_field(name = b1, value = b2, inline=True)
-	e.add_field(name = 'Pokébadges', value = f"{features}ㅤ{features1}ㅤ{features2}ㅤ{features3}ㅤ{features4}ㅤ{features5}\n\n{features6}ㅤ{features7}ㅤ{features8}ㅤ{features9}ㅤ{features10}ㅤ{features11}\n\n{features12}ㅤ{features13}ㅤ{features14}ㅤ{features15}ㅤ{features16}ㅤ[{features17}]", inline = True)
+	e.add_field(name = "League Status", value = league)
+	e.add_field(name = 'ㅤㅤ Pokébadges', value = f"ㅤㅤ {features}ㅤ{features1}ㅤ{features2}ㅤ{features3}ㅤ{features4}ㅤ{features5}\n\nㅤㅤ {features6}ㅤ{features7}ㅤ{features8}ㅤ{features9}ㅤ{features10}ㅤ{features11}\n\nㅤㅤ {features12}ㅤ{features13}ㅤ{features14}ㅤ{features15}ㅤ{features16}", inline = True)
 
 	await ctx.send(embed=e)
 

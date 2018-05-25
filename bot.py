@@ -338,9 +338,12 @@ async def leaguecompleted(ctx, *, member: discord.Member = None):
 	author = ctx.message.author.mention
 	author2 = ctx.author
 	mention = member.mention
+	role = discord.utils.get(guild.roles, name='League Access')
 
 	if author2.id in elitelead:
 		await comp.append(member.id)
+		await member.add_roles(role)
+
 
 ###################################################################################
 ###################################################################################

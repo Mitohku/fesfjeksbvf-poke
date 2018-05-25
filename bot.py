@@ -435,6 +435,8 @@ async def badges(ctx, *, member: discord.Member = None):
 				features17 = "Gym Leader (Laverre - Fairy)"
 			else:
 				features17 = "Gym Leader"
+	else:
+		features17 = "No Specific Role"
 
 	if member.id in pewter2:
 		features = "<:Pewter:449610408060518410>"
@@ -496,45 +498,63 @@ async def badges(ctx, *, member: discord.Member = None):
 	league2 = "Didn't start the League"
 
 	if member.id in laverre2:
-		b1 = "No Badges Left!"
+		b1 = "No Badges Left!  "
+		number = "(17/17)"
 		if member.id in comp:
 			b2 = "You finished the League."
 		else:
 			b2 = "You can access the League."
 	else:
-		b1 = "Badges Left"
+		b1 = "Badges Left:  "
+		number = "(0/17)"
 		if member.id in pewter2:
 			b2 = "16 badges left"
+			number = "(1/17)"
 			if member.id in cerulean2:
 				b2 = "15 badges left"
+				number = "(2/17)"
 				if member.id in vermilion2:
 					b2 = "14 badges left"
+					number = "(3/17)"
 					if member.id in celadon2:
 						b2 = "13 badges left"
+						number = "(4/17)"
 						if member.id in fuschia2:
 							b2 = "12 badges left"
+							number = "(5/17)"
 							if member.id in saffron2:
 								b2 = "11 badges left"
+								number = "(6/17)"
 								if member.id in cinnabar2:
 									b2 = "10 badges left"
+									number = "(7/17)"
 									if member.id in viridian2:
 										b2 = "9 badges left"
+										number = "(8/17)"
 										if member.id in violet2:
 											b2 = "8 badges left"
+											number = "(9/17)"
 											if member.id in azalea2:
 												b2 = "7 badges left"
+												number = "(10/17)"
 												if member.id in goldenrod2:
 													b2 = "6 badges left"
+													number = "(11/17)"
 													if member.id in ecruteak2:
 														b2 = "5 badges left"
+														number = "(12/17)"
 														if member.id in cianwood2:
 															b2 = "4 badges left"
+															number = "(13/17)"
 															if member.id in olivine2:
 																b2 = "3 badges left"
+																number = "(14/17)"
 																if member.id in mahogany2:
 																	b2 = "2 badges left"
+																	number = "(15/17)"
 																	if member.id in blackthorn2:
 																		b2 = "1 badge left"
+																		number = "(16/17)"
 		else:
 			b2 = "No badges acquired."
 
@@ -553,7 +573,7 @@ async def badges(ctx, *, member: discord.Member = None):
 	e.set_footer(text = f"Member since: {member.joined_at.__format__('%d %b %Y at %H:%M:%S')}")#.timestamp = member.joined_at
 	e.add_field(name = 'Account created at', value = member.created_at.__format__('Date: **%d %b %Y**\nTime: **%H:%M:%S**\nㅤ'))
 	e.add_field(name = 'User ID', value = member.id)
-	e.add_field(name = b1, value = b2, inline=True)
+	e.add_field(name = f"{b1}{number}", value = b2, inline=True)
 	e.add_field(name = f"Social Status/Role {league1}", value = f"{features17}\n{league2}", inline=True)
 	e.add_field(name = 'Pokébadges', value = f"{features}ㅤ{features1}ㅤ{features2}ㅤ{features3}ㅤ{features4}ㅤ{features5}\n\n{features6}ㅤ{features7}ㅤ{features8}ㅤ{features9}ㅤ{features10}ㅤ{features11}\n\n{features12}ㅤ{features13}ㅤ{features14}ㅤ{features15}ㅤ{features16}", inline = True)
 

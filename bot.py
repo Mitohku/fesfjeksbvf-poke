@@ -311,6 +311,7 @@ async def complete(ctx, *, member : discord.Member=None):
 @bot.command(aliases = ['league', 'access', 'la', 'al'])
 async def leagueaccess(ctx, *, member: discord.Member = None):
 
+	guild = ctx.guild
 	author = ctx.message.author.mention
 	author2 = ctx.author
 	role = discord.utils.get(guild.roles, name='League Access')

@@ -21,7 +21,7 @@ bot = commands.Bot(command_prefix, description = description)
 bot.remove_command('help')
 tu = datetime.datetime.now()
 
-gym = [385419569558323202, 307219837648764928, 220231135949619200, 349989345714896906, 247166156467732482, 333204266309255168]
+gym = [385419569558323202, 307219837648764928, 220231135949619200, 349989345714896906, 247166156467732482, 333204266309255168, 186195192301223936]
 pewter = []
 cerulean = []
 vermilion = []
@@ -69,7 +69,7 @@ comp = [385419569558323202]
 async def on_ready():
     print('Logged in as')
     print(bot.user.name)
-    print(bot.user.id)
+    print(bot.user.id) 
     print('------')
 
 ###################################################################################
@@ -151,10 +151,9 @@ async def owner(ctx):
 @bot.command(aliases = ['ms'])
 async def ping(ctx):
 		pingms = "{}".format(int(bot.latency * 1000)) #MS
-		pings = "{}".format(int(bot.latency * 1)) #S
 
 		ping1 = discord.Embed(colour = discord.Colour(0xA522B3))
-		ping1.description = f"My latency is actually **{pings}s** | **{pingms}ms**."
+		ping1.description = f"My latency is actually **{pingms}ms**."
 		ping1.set_footer(text = time.strftime("%d/%m/%Y - %I:%M:%S %p"))
 		await ctx.send(embed = ping1)
 
@@ -213,12 +212,12 @@ async def game_watching(self, *, game = None):
 @game.command(name = 'default')
 async def game_default(self):
 
-	bot_prefix = "st"
+	bot_prefix = "p!"
 	server = self.guild
 
 	await self.send(f"**{self.bot.user.name}**'s status succesfully changed to 'Default'")
 
-	games = [f"Use {bot_prefix}help for help!", f"{sum(1 for _ in self.bot.get_all_members())} users | {len(self.bot.guilds)} servers", f"Wanna invite {self.bot.user.name}? Use: {bot_prefix}inv", f"Give us feedback? Use: {bot_prefix}feedback [message]"]
+	games = [f"Use {bot_prefix}help for help!", f"{sum(1 for _ in self.bot.get_all_members())} users", f"Give us feedback? Use: {bot_prefix}feedback [message]"]
 	current_number = 0
 	while True:
 		if current_number == len(games):
@@ -291,9 +290,7 @@ async def complete(ctx, *, member : discord.Member=None):
 			else:
 				return
 
-			embed = discord.Embed(colour = discord.Colour(0xA522B3))
-			embed.description = f"{mention} now have your **gym badge** for reaching/finishing your gym!"
-			await ctx.send(embed = embed)
+			await ctx.send(f"{mention} now have your **gym badge** for reaching/finishing your gym!")
 
 		else:
 			await ctx.send(f"You aren't a **Gym Leader**, {author} !")
@@ -345,7 +342,7 @@ async def leaguecompleted(ctx, *, member: discord.Member = None):
 
 	if author2.id in elitelead:
 		comp.append(member.id)
-		await channel.send(f"{member.mention} has cleared the League! Everyone give them a warm GG!")
+		await channel.send(f"{member.mention} has cleared the **League**! Everyone give them a warm GG!")
 
 ###################################################################################
 ###################################################################################
@@ -463,11 +460,14 @@ async def badges(ctx, *, member: discord.Member = None):
 																			features16 = "ㅤㅤ"
 	b1 = "ㅤ"
 	b2 = "ㅤ"
-	league = "ㅤ"
+	league = "<:Didnt_Start:449628615999488000>  Didn't start the League"
 
 	if member.id in laverre2:
 		b1 = "No Badges Left!"
-		b2 = "You can access the League."
+		if member.id in comp:
+			b2 = "You finished the League."
+		else:
+			b2 = "You can access the League."
 	else:
 		b1 = "Badges Left"
 		if member.id in pewter2:
@@ -502,15 +502,16 @@ async def badges(ctx, *, member: discord.Member = None):
 																	b2 = "2 badges left"
 																	if member.id in blackthorn2:
 																		b2 = "1 badge left"
+		else:
+			b2 = "17 badges left"
 
 	if member.id in laverre2:
-		league = "<:Didnt_Start:449628615999488000>"
 		if member.id in started:
-			league = "<:Elite_4_Fight:449629015872110592>"
+			league = "<:Elite_4_Fight:449629015872110592>  Started the League"
 			if member.id in master:
-				league = "<:Elite_Master_Fight:449628615156564015>"
+				league = "<:Elite_Master_Fight:449628615156564015>  Fighting VS. Elite Master"
 				if member.id in comp:
-					league = "<:Completed:449628616284831744>"
+					league = "<:Completed:449628616284831744>  Completed the League"
 
 
 	e.set_footer(text = f"Member since: {member.joined_at.__format__('%d %b %Y at %H:%M:%S')}")#.timestamp = member.joined_at

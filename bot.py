@@ -324,24 +324,24 @@ async def badges(ctx, *, member: discord.Member = None):
 		e.set_thumbnail(url = member.default_avatar_url)
 		e.set_author(name = str(member), icon_url = member.default_avatar_url)
 
-	features = "ㅤ"
-	features1 = "ㅤ"
-	features2 = "ㅤ"
-	features3 = "ㅤ"
-	features4 = "ㅤ"
-	features5 = "ㅤ"
-	features6 = "ㅤ"
-	features7 = "ㅤ"
-	features8 = "ㅤ"
-	features9 = "ㅤ"
-	features10 = "ㅤ"
-	features11 = "ㅤ"
-	features12 = "ㅤ"
-	features13 = "ㅤ"
-	features14 = "ㅤ"
-	features15 = "ㅤ"
-	features16 = "ㅤ"
-	features17 = "ㅤ"
+	features = "ㅤㅤ"
+	features1 = "ㅤㅤ"
+	features2 = "ㅤㅤ"
+	features3 = "ㅤㅤ"
+	features4 = "ㅤㅤ"
+	features5 = "ㅤㅤ"
+	features6 = "ㅤㅤ"
+	features7 = "ㅤㅤ"
+	features8 = "ㅤㅤ"
+	features9 = "ㅤㅤ"
+	features10 = "ㅤㅤ"
+	features11 = "ㅤㅤ"
+	features12 = "ㅤㅤ"
+	features13 = "ㅤㅤ"
+	features14 = "ㅤㅤ"
+	features15 = "ㅤㅤ"
+	features16 = "ㅤㅤ"
+	features17 = "ㅤㅤ"
 
 	if member.id in gym:
 		if member.id in elite:
@@ -353,42 +353,61 @@ async def badges(ctx, *, member: discord.Member = None):
 			features17 = "Lead"
 		else:
 			features17 = "Gym"
-			
+
 	if member.id in pewter2:
+		features = ":one:"
 		if member.id in cerulean2:
-			features1 = ":one:"
-		elif member.id in vermilion2:
-			features2 = ":two:"
-		elif member.id in celadon2:
-			features3 = ":three:"
-		elif member.id in fuschia2:
-			features4 = ":four:"
-		elif member.id in saffron2:
-			features5 = ":five:"
-		elif member.id in cinnabar2:
-			features6 = ":six:"
-		elif member.id in viridian2:
-			features7 = ":seven:"
-		elif member.id in violet2:
-			features8 = ":eight:"
-		elif member.id in azalea2:
-			features9 = ":nine:"
-		elif member.id in goldenrod2:
-			features10 = ":one::zero:"
-		elif member.id in ecruteak2:
-			features11 = ":one::one:"
-		elif member.id in cianwood2:
-			features12 = ":one::two:"
-		elif member.id in olivine2:
-			features13 = ":one::three:"
-		elif member.id in mahogany2:
-			features14 = ":one::four:"
-		elif member.id in blackthorn2:
-			features15 = ":one::five:"
-		elif member.id in laverre2:
-			features16 = ":one::six:"
-		else:
-			features = ":one:"
+			features1 = ":two:"
+			if member.id in vermilion2:
+				features2 = ":three:"
+				if member.id in celadon2:
+					features3 = ":four:"
+					if member.id in fuschia2:
+						features4 = ":five:"
+						if member.id in fuschia2:
+							features4 = ":five:"
+							if member.id in saffron2:
+								features5 = ":six:"
+								if member.id in cinnabar2:
+									features6 = ":seven:"
+									if member.id in viridian2:
+										features7 = ":eight:"
+										if member.id in violet2:
+											features8 = ":nine:"
+											if member.id in azalea2:
+												features9 = ":one::zero:"
+												if member.id in goldenrod2:
+													features10 = ":one::one:"
+													if member.id in ecruteak2:
+														features11 = ":one::two:"
+														if member.id in cianwood2:
+															features12 = ":one::three:"
+															if member.id in olivine2:
+																features13 = ":one::four:"
+																if member.id in mahogany2:
+																	features14 = ":one::five:"
+																	if member.id in blackthorn2:
+																		features15 = ":one::six:"
+																		if member.id in laverre2:
+																			features16 = ":one::seven:"
+																		else:
+																			features = "ㅤㅤ"
+																			features1 = "ㅤㅤ"
+																			features2 = "ㅤㅤ"
+																			features3 = "ㅤㅤ"
+																			features4 = "ㅤㅤ"
+																			features5 = "ㅤㅤ"
+																			features6 = "ㅤㅤ"
+																			features7 = "ㅤㅤ"
+																			features8 = "ㅤㅤ"
+																			features9 = "ㅤㅤ"
+																			features10 = "ㅤㅤ"
+																			features11 = "ㅤㅤ"
+																			features12 = "ㅤㅤ"
+																			features13 = "ㅤㅤ"
+																			features14 = "ㅤㅤ"
+																			features15 = "ㅤㅤ"
+																			features16 = "ㅤㅤ"
 
 
 	e.set_footer(text = f"Member since: {member.joined_at.__format__('%d %b %Y at %H:%M:%S')}")#.timestamp = member.joined_at

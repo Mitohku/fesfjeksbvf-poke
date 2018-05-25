@@ -408,11 +408,52 @@ async def badges(ctx, *, member: discord.Member = None):
 																			features14 = "ㅤㅤ"
 																			features15 = "ㅤㅤ"
 																			features16 = "ㅤㅤ"
+	b1 = "ㅤ"
+	b2 = "ㅤ"
+
+	if member.id in laverre2:
+		b1 = "No Badges Left!"
+		b2 = "You can access the League."
+	else:
+		b1 = "Badges Left"
+		if member.id in pewter2:
+			b2 = "16 badges left"
+			if member.id in cerulean2:
+				b2 = "15 badges left"
+				if member.id in vermilion2:
+					b2 = "14 badges left"
+					if member.id in celadon2:
+						b2 = "13 badges left"
+						if member.id in fuschia2:
+							b2 = "12 badges left"
+							if member.id in saffron2:
+								b2 = "11 badges left"
+								if member.id in cinnabar2:
+									b2 = "10 badges left"
+									if member.id in viridian2:
+										b2 = "9 badges left"
+										if member.id in violet2:
+											b2 = "8 badges left"
+											if member.id in azalea2:
+												b2 = "7 badges left"
+												if member.id in goldenrod2:
+													b2 = "6 badges left"
+													if member.id in ecruteak2:
+														b2 = "5 badges left"
+														if member.id in cianwood2:
+															b2 = "4 badges left"
+															if member.id in olivine2:
+																b2 = "3 badges left"
+																if member.id in mahogany2:
+																	b2 = "2 badges left"
+																	if member.id in blackthorn2:
+																		b2 = "1 badge left"
 
 
 	e.set_footer(text = f"Member since: {member.joined_at.__format__('%d %b %Y at %H:%M:%S')}")#.timestamp = member.joined_at
-	e.add_field(name = 'User ID', value = member.id)
 	e.add_field(name = 'Account created at', value = member.created_at.__format__('Date: **%d %b %Y**\nTime: **%H:%M:%S**'))
+	e.add_field(name = 'User ID', value = member.id)
+	e.add_field(name = b1, value =, b2, inline=True)
 	e.add_field(name = 'Pokébadges', value = f"{features}ㅤ{features1}ㅤ{features2}ㅤ{features3}ㅤ{features4}ㅤ{features5}\n\n{features6}ㅤ{features7}ㅤ{features8}ㅤ{features9}ㅤ{features10}ㅤ{features11}\n\n{features12}ㅤ{features13}ㅤ{features14}ㅤ{features15}ㅤ{features16}ㅤ[{features17}]")
 
 	await ctx.send(embed=e)

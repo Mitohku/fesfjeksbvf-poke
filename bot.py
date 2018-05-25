@@ -313,10 +313,11 @@ async def leagueaccess(ctx, *, member: discord.Member = None):
 
 	author = ctx.message.author.mention
 	author2 = ctx.author
-	mention = member.mention
+	role = discord.utils.get(guild.roles, name='League Access')
 
 	if author2.id in laverre2:
 		await started.append(author2.id)
+		await member.add_roles(role)
 
 ###################################################################################
 
@@ -325,7 +326,6 @@ async def masterfight(ctx, *, member: discord.Member = None):
 
 	author = ctx.message.author.mention
 	author2 = ctx.author
-	mention = member.mention
 
 	if author2.id in elitelead:
 		await master.append(member.id)
@@ -337,13 +337,9 @@ async def leaguecompleted(ctx, *, member: discord.Member = None):
 
 	author = ctx.message.author.mention
 	author2 = ctx.author
-	mention = member.mention
-	role = discord.utils.get(guild.roles, name='League Access')
 
 	if author2.id in elitelead:
 		await comp.append(member.id)
-		await member.add_roles(role)
-
 
 ###################################################################################
 ###################################################################################

@@ -318,7 +318,7 @@ async def leagueaccess(ctx, *, member: discord.Member = None):
 
 	if author2.id in laverre2:
 		started.append(author2.id)
-		await member.add_roles(role)
+		await author2.add_roles(role)
 
 ###################################################################################
 

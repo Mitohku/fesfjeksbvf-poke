@@ -302,6 +302,50 @@ async def complete(ctx, *, member : discord.Member=None):
 ###################################################################################
 ###																				###
 ###																				###
+###								   LEAGUE ACCESS  								###
+###																				###
+###																				###
+###################################################################################
+###################################################################################
+
+@bot.command(aliases = ['league', 'access', 'la', 'al'])
+async def leagueaccess(ctx, *, member: discord.Member = None):
+
+	author = ctx.message.author.mention
+	author2 = ctx.author
+	mention = member.mention
+
+	if author2.id in laverre2:
+		await started.append(author2.id)
+
+###################################################################################
+
+@bot.command(aliases = ['master', "mf", "fm"])
+async def masterfight(ctx, *, member: discord.Member = None):
+
+	author = ctx.message.author.mention
+	author2 = ctx.author
+	mention = member.mention
+
+	if author2.id in elitelead:
+		await master.append(member.id)
+
+###################################################################################
+
+@bot.command(aliases = ['comp', 'leaguec', 'cleague', 'complete', 'completed'])
+async def leaguecompleted(ctx, *, member: discord.Member = None):
+
+	author = ctx.message.author.mention
+	author2 = ctx.author
+	mention = member.mention
+
+	if author2.id in elitelead:
+		await comp.append(member.id)
+
+###################################################################################
+###################################################################################
+###																				###
+###																				###
 ###								   BADGES COMMAND  								###
 ###																				###
 ###																				###

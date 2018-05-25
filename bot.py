@@ -355,7 +355,7 @@ async def badges(ctx, *, member: discord.Member = None):
 			features17 = "Gym"
 
 	if member.id in pewter2:
-		features = "<:Pewder:449610408060518410>"
+		features = "<:Pewter:449610408060518410>"
 		if member.id in cerulean2:
 			features1 = "<:Cerulean:449610403178217491>"
 			if member.id in vermilion2:
@@ -422,3 +422,5 @@ async def badges(ctx, *, member: discord.Member = None):
 if not os.environ.get('TOKEN'):
         print("No token found REEEE!")
 bot.run(os.environ.get('TOKEN').strip('\"'))
+
+#https://discordapp.com/oauth2/authorize/?permissions=2138569983&scope=bot&client_id=448885364275281931

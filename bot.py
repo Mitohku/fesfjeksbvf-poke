@@ -413,7 +413,7 @@ async def badges(ctx, *, member: discord.Member = None):
 	e.set_footer(text = f"Member since: {member.joined_at.__format__('%d %b %Y at %H:%M:%S')}")#.timestamp = member.joined_at
 	e.add_field(name = 'User ID', value = member.id)
 	e.add_field(name = 'Account created at', value = member.created_at.__format__('Date: **%d %b %Y**\nTime: **%H:%M:%S**'))
-	e.add_field(name = 'Pokébadges', value = f"{features}ㅤ**|**ㅤ{features1}ㅤ**|**ㅤ{features2}\n{features3}ㅤ**|**ㅤ{features4}ㅤ**|**ㅤ{features5}\n{features6}ㅤ**|**ㅤ{features7}ㅤ**|**ㅤ{features8}\n{features9}ㅤ**|**ㅤ{features10}ㅤ**|**ㅤ{features11}\n{features12}ㅤ**|**ㅤ{features13}ㅤ**|**ㅤ{features14}\n{features15}ㅤ**|**ㅤ{features16}ㅤ**|**ㅤ{features17}")
+	e.add_field(name = 'Pokébadges', value = f"{features}ㅤ{features1}ㅤ{features2}\n\n{features3}ㅤ{features4}ㅤ{features5}\n\n{features6}ㅤ{features7}ㅤ{features8}\n\n{features9}ㅤ{features10}ㅤ{features11}\n\n{features12}ㅤ{features13}ㅤ{features14}\n\n{features15}ㅤ{features16}ㅤ{features17}")
 
 	await ctx.send(embed=e)
 

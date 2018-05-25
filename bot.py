@@ -332,7 +332,7 @@ async def masterfight(ctx, *, member: discord.Member = None):
 
 ###################################################################################
 
-@bot.command(aliases = ['comp', 'leaguec', 'cleague', 'complete', 'completed'])
+@bot.command(aliases = ['comp', 'leaguec', 'cleague'])
 async def leaguecompleted(ctx, *, member: discord.Member = None):
 
 	author = ctx.message.author.mention

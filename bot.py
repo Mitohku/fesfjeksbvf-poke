@@ -355,41 +355,41 @@ async def badges(ctx, *, member: discord.Member = None):
 			features17 = "Gym"
 
 	if member.id in pewter2:
-		features = ":one:"
+		features = "<:Pewder:449610408060518410>"
 		if member.id in cerulean2:
-			features1 = ":two:"
+			features1 = "<:Cerulean:449610403178217491>"
 			if member.id in vermilion2:
-				features2 = ":three:"
+				features2 = "<:Vermilion:449610409692102666>"
 				if member.id in celadon2:
-					features3 = ":four:"
+					features3 = "<:Celadon:449610403266297859>"
 					if member.id in fuschia2:
-						features4 = ":five:"
+						features4 = "<:Fuchsia:449610407347355659>"
 						if member.id in fuschia2:
-							features4 = ":five:"
+							features4 = "<:Fuchsia:449610407347355659>"
 							if member.id in saffron2:
-								features5 = ":six:"
+								features5 = "<:Saffron:449610409637576714>"
 								if member.id in cinnabar2:
-									features6 = ":seven:"
+									features6 = "<:Cinnabar:449610408177958914>"
 									if member.id in viridian2:
-										features7 = ":eight:"
+										features7 = "<:Viridian:449610409549365248> "
 										if member.id in violet2:
-											features8 = ":nine:"
+											features8 = "<:Violet:449610409755017216>"
 											if member.id in azalea2:
-												features9 = ":one::zero:"
+												features9 = "<:Azalea:449610403782066177>"
 												if member.id in goldenrod2:
-													features10 = ":one::one:"
+													features10 = "<:Goldenrod:449610409364684800>"
 													if member.id in ecruteak2:
-														features11 = ":one::two:"
+														features11 = "<:Ecruteak:449610409138454542>"
 														if member.id in cianwood2:
-															features12 = ":one::three:"
+															features12 = "<:Cianwood:449610404566401035>"
 															if member.id in olivine2:
-																features13 = ":one::four:"
+																features13 = "<:Olivine:449610409528393728>"
 																if member.id in mahogany2:
-																	features14 = ":one::five:"
+																	features14 = "<:Mahogany:449610411260772362>"
 																	if member.id in blackthorn2:
-																		features15 = ":one::six:"
+																		features15 = "<:Blackthorn:449610403987849216>"
 																		if member.id in laverre2:
-																			features16 = ":one::seven:"
+																			features16 = "<:Laverre:449610407422722069>"
 																		else:
 																			features = "ㅤㅤ"
 																			features1 = "ㅤㅤ"

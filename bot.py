@@ -61,9 +61,9 @@ laverre2 = [385419569558323202]
 elite = [220231135949619200, 247166156467732482, 333204266309255168, 349989345714896906] 
 elitelead = [385419569558323202] 
 
-started = []
-master = []
-complete = [385419569558323202]
+started = [385419569558323202]
+master = [385419569558323202]
+complete = [385419569558323202] 
 	
 @bot.event
 async def on_ready():
@@ -455,14 +455,13 @@ async def badges(ctx, *, member: discord.Member = None):
 																		b2 = "1 badge left"
 
 	if member.id in laverre2:
+		league = "<:Didnt_Start:449628615999488000>"
 		if member.id in started:
 			league = "<:Elite_4_Fight:449629015872110592>"
-		elif member.id in master:
-			league = "<:Elite_Master_Fight:449628615156564015>"
-		elif member.id in complete:
-			league = "<:Completed:449628616284831744>"
-		else:
-			league = "<:Didnt_Start:449628615999488000>"
+			if member.id in master:
+				league = "<:Elite_Master_Fight:449628615156564015>"
+				if member.id in complete:
+					league = "<:Completed:449628616284831744>"
 
 
 	e.set_footer(text = f"Member since: {member.joined_at.__format__('%d %b %Y at %H:%M:%S')}")#.timestamp = member.joined_at

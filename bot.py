@@ -323,17 +323,6 @@ async def badges(ctx, *, member: discord.Member = None):
 	else:
 		e.set_thumbnail(url = member.default_avatar_url)
 		e.set_author(name = str(member), icon_url = member.default_avatar_url)
-		
-	if member.id in gym:
-		if member.id in elite:
-			if member.id in elitelead:
-				features17 = "Lead"
-			else:
-				features17 = "Elite"
-		elif member.id in elitelead:
-			features17 = "Lead"
-		else:
-			features17 = "Gym"
 
 	features = "ㅤ"
 	features1 = "ㅤ"
@@ -353,7 +342,18 @@ async def badges(ctx, *, member: discord.Member = None):
 	features15 = "ㅤ"
 	features16 = "ㅤ"
 	features17 = "ㅤ"
-		
+
+	if member.id in gym:
+		if member.id in elite:
+			if member.id in elitelead:
+				features17 = "Lead"
+			else:
+				features17 = "Elite"
+		elif member.id in elitelead:
+			features17 = "Lead"
+		else:
+			features17 = "Gym"
+			
 	if member.id in pewter2:
 		if member.id in cerulean2:
 			features1 = ":one:"

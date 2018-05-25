@@ -63,7 +63,7 @@ elitelead = [385419569558323202]
 
 started = [385419569558323202]
 master = [385419569558323202]
-complete = [385419569558323202] 
+comp = [385419569558323202] 
 	
 @bot.event
 async def on_ready():
@@ -460,7 +460,7 @@ async def badges(ctx, *, member: discord.Member = None):
 			league = "<:Elite_4_Fight:449629015872110592>"
 			if member.id in master:
 				league = "<:Elite_Master_Fight:449628615156564015>"
-				if member.id in complete:
+				if member.id in comp:
 					league = "<:Completed:449628616284831744>"
 
 

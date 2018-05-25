@@ -457,10 +457,10 @@ async def badges(ctx, *, member: discord.Member = None):
 	if member.id in laverre2:
 		if member.id in started:
 			league = "<:Elite_4_Fight:449629015872110592>"
-			if member.id in master:
-				league = "<:Elite_Master_Fight:449628615156564015>"
-				if member.id in complete:
-					league = "<:Completed:449628616284831744>"
+		elif member.id in master:
+			league = "<:Elite_Master_Fight:449628615156564015>"
+		elif member.id in complete:
+			league = "<:Completed:449628616284831744>"
 		else:
 			league = "<:Didnt_Start:449628615999488000>"
 
@@ -470,7 +470,7 @@ async def badges(ctx, *, member: discord.Member = None):
 	e.add_field(name = 'User ID', value = member.id)
 	e.add_field(name = b1, value = b2, inline=True)
 	e.add_field(name = "League Status", value = league)
-	e.add_field(name = 'ㅤㅤ Pokébadges', value = f"ㅤㅤ {features}ㅤ{features1}ㅤ{features2}ㅤ{features3}ㅤ{features4}ㅤ{features5}\n\nㅤㅤ {features6}ㅤ{features7}ㅤ{features8}ㅤ{features9}ㅤ{features10}ㅤ{features11}\n\nㅤㅤ {features12}ㅤ{features13}ㅤ{features14}ㅤ{features15}ㅤ{features16}", inline = True)
+	e.add_field(name = 'Pokébadges', value = f"{features}ㅤ{features1}ㅤ{features2}ㅤ{features3}ㅤ{features4}ㅤ{features5}\n\n{features6}ㅤ{features7}ㅤ{features8}ㅤ{features9}ㅤ{features10}ㅤ{features11}\n\n{features12}ㅤ{features13}ㅤ{features14}ㅤ{features15}ㅤ{features16}", inline = True)
 
 	await ctx.send(embed=e)
 

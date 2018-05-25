@@ -58,7 +58,7 @@ mahogany2 = [385419569558323202]
 blackthorn2 = [385419569558323202]
 laverre2 = [385419569558323202]
 
-elite = [220231135949619200, 247166156467732482]
+elite = [220231135949619200, 247166156467732482, 333204266309255168] 
 elitelead = [385419569558323202] 
 	
 @bot.event
@@ -334,6 +334,25 @@ async def badges(ctx, *, member: discord.Member = None):
 			features17 = "Lead"
 		else:
 			features17 = "Gym"
+
+	features = "ㅤ"
+	features1 = "ㅤ"
+	features2 = "ㅤ"
+	features3 = "ㅤ"
+	features4 = "ㅤ"
+	features5 = "ㅤ"
+	features6 = "ㅤ"
+	features7 = "ㅤ"
+	features8 = "ㅤ"
+	features9 = "ㅤ"
+	features10 = "ㅤ"
+	features11 = "ㅤ"
+	features12 = "ㅤ"
+	features13 = "ㅤ"
+	features14 = "ㅤ"
+	features15 = "ㅤ"
+	features16 = "ㅤ"
+	features17 = "ㅤ"
 		
 	if member.id in pewter2:
 		if member.id in cerulean2:
@@ -370,25 +389,7 @@ async def badges(ctx, *, member: discord.Member = None):
 			features16 = ":one::six:"
 		else:
 			features = ":one:"
-	else:
-		features = "ㅤ"
-		features1 = "ㅤ"
-		features2 = "ㅤ"
-		features3 = "ㅤ"
-		features4 = "ㅤ"
-		features5 = "ㅤ"
-		features6 = "ㅤ"
-		features7 = "ㅤ"
-		features8 = "ㅤ"
-		features9 = "ㅤ"
-		features10 = "ㅤ"
-		features11 = "ㅤ"
-		features12 = "ㅤ"
-		features13 = "ㅤ"
-		features14 = "ㅤ"
-		features15 = "ㅤ"
-		features16 = "ㅤ"
-		features17 = "ㅤ"
+
 
 	e.set_footer(text = f"Member since: {member.joined_at.__format__('%d %b %Y at %H:%M:%S')}")#.timestamp = member.joined_at
 	e.add_field(name = 'User ID', value = member.id)

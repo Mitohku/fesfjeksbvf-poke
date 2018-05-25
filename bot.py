@@ -319,6 +319,7 @@ async def leagueaccess(ctx, *, member: discord.Member = None):
 	if author2.id in laverre2:
 		started.append(author2.id)
 		await author2.add_roles(role)
+		await ctx.send(f"{author}, you have been given access to enter the League!")
 
 ###################################################################################
 
@@ -327,9 +328,11 @@ async def masterfight(ctx, *, member: discord.Member = None):
 
 	author = ctx.message.author.mention
 	author2 = ctx.author
-
+	channel = bot.get_channel(449660215298621470)
+	
 	if author2.id in elitelead:
 		master.append(member.id)
+		await ctx.channel.send(f"{member.id} has beaten all **Elite Four** members, they can now fight against the **Elite Master** !")
 
 ###################################################################################
 
@@ -338,9 +341,11 @@ async def leaguecompleted(ctx, *, member: discord.Member = None):
 
 	author = ctx.message.author.mention
 	author2 = ctx.author
+	channel = bot.get_channel(449660215298621470)
 
 	if author2.id in elitelead:
 		comp.append(member.id)
+		await ctx.channel.send(f"{member.id} has cleared the League! Everyone give them a warm GG!")
 
 ###################################################################################
 ###################################################################################

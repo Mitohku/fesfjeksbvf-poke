@@ -568,6 +568,15 @@ async def badges(ctx, *, member: discord.Member = None):
 				if member.id in comp:
 					league1 = "<:Completed:449628616284831744>"
 					league2 = "Completed the League"
+		if member.id in master:
+				league1 = "<:Elite_Master_Fight:449628615156564015>"
+				league2 = "Fighting VS. Elite Master"
+				if member.id in comp:
+					league1 = "<:Completed:449628616284831744>"
+					league2 = "Completed the League"
+		if member.id in comp:
+					league1 = "<:Completed:449628616284831744>"
+					league2 = "Completed the League"
 
 
 	e.set_footer(text = f"Member since: {member.joined_at.__format__('%d %b %Y at %H:%M:%S')}")#.timestamp = member.joined_at

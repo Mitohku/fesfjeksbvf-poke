@@ -656,6 +656,8 @@ async def eroles(ctx):
 
 	e.set_author(name = "Self-Assignable Roles", icon_url = avi)
 	e.description= "If you want a role, just click the correct emoji dedicated to that role you'd like to have to assign it to yourself.\nIf you would like to take it off, just click the emoji again to remove it!"
+	e.add_field(name="Leveled Roles", value=f"Those are automatically assigned by {mee.mention} when you meet the correct level.", inline=False)
+	e.add_field(name="Other Roles", value=f"Those are assigned by Gym Leaders/Elite Fours when you beat their arena.", inline=False)
 	e.set_footer(text = "Custom Roles can be bought by donating at least 1€.")
 
 	await ctx.send(embed = e)

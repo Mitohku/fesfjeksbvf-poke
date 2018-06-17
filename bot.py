@@ -602,6 +602,7 @@ async def badges(ctx, *, member: discord.Member = None):
 async def erules(ctx):
 
 	e = discord.Embed(colour = discord.Colour(0x7289DA))
+	e2 = discord.Embed(colour = discord.Colour(0x7289DA))
 
 	guild = ctx.guild
 	avi = guild.icon_url
@@ -611,6 +612,9 @@ async def erules(ctx):
 	suggestion = bot.get_channel(449199119148253195)
 	announcement = bot.get_channel(447492742315114496)
 	faq = bot.get_channel(450039051169300500)
+	pokemon = bot.get_channel(457860659095535626)
+	trading1 = bot.get_channel(450040365555122187)
+	trading2 = bot.get_channel(450040431686713367)
 
 	e.set_author(name = "Welcome to Pokémon Universe", icon_url = avi)
 	e.add_field(name = "Server Rules", value = "**#1.** No need for personal attacks. If you have a problem with someone contact one of the Admins/Mods, we will help you.", inline=False)
@@ -628,9 +632,18 @@ async def erules(ctx):
 	e.add_field(name = "ㅤ", value = f"**#13.** Keep chat in English or use {international.mention}.", inline=False)
 	e.add_field(name = "ㅤ", value = f"**#14.** Read {faq.mention} and {announcement.mention} before messaging a staff member, chances are the answer to your question is in there.", inline=False)
 	e.add_field(name = "ㅤ", value = "**#15.** Do not repeatedly use a bot command for no reason.", inline=False)
-	e.add_field(name = "ㅤ", value = "**#16.** Follow Discord [Terms of Service](https://discordapp.com/terms) and [Community Guidelines](https://discordapp.com/guidelines)", inline=False)
+	e.add_field(name = "ㅤ", value = f"**#16.** Don't use `p!info <pokemon>` in general use {pokemon.mention} please.", inline=False)
+	e.add_field(name = "ㅤ", value = "**#17.** Follow Discord [Terms of Service](https://discordapp.com/terms) and [Community Guidelines](https://discordapp.com/guidelines)", inline=False)
+	e.set_footer(text = "If a rule is broken and no Admins or Moderators see it, please mention a Moderator.")
+
+	e2.add_field(name = "Trading Rules", value = "**1.** As it is easy to guess, scamming is forbidden.", inline=False)
+	e2.add_field(name = "ㅤ", value = f"**#2.** Use {trading1.mention} and {trading2.mention} only to advertise your offers.", inline=False)
+	e2.add_field(name = "ㅤ", value = "**#3.** If your trading message is considered too long a mod may warn you for it, and if repeated you will be muted.", inline=False)
+	e2.add_field(name = "ㅤ", value = "**#4.** Posting more than ONE trading message per minute will result in a mute/warn.", inline=False)
+	e2.set_footer(text = "If a rule is broken and no Admins or Moderators see it, please mention a Moderator.")
 
 	await ctx.send(embed = e)
+	await ctx.send(embed = e2)
 
 ###################################################################################
 

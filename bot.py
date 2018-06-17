@@ -606,7 +606,7 @@ async def erules(ctx):
 	guild = ctx.guild
 	avi = guild.icon_url
 	e.set_thumbnail(url = avi)
-	e.set_author(name = Welcome to Pokémon Universe, icon_url = avi)
+	e.set_author(name = "Welcome to Pokémon Universe", icon_url = avi)
 
 	await ctx.send(embed = e)
 

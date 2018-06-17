@@ -646,6 +646,22 @@ async def erules(ctx):
 
 ###################################################################################
 
+@bot.command()
+async def eroles(ctx):
+
+	e = discord.Embed(colour = discord.Colour(0x7289DA))
+
+	guild = ctx.guild
+	avi = guild.icon_url
+
+	e.set_author(name = "Self-Assignable Roles", icon_url = avi)
+	e.description= "If you want a role, just click the correct emoji dedicated to that role you'd like to have to assign it to yourself.\nIf you would like to take it off, just click the emoji again to remove it!"
+	e.set_footer(text = "Custom Roles can be bought by donating at least 1€.")
+
+	await ctx.send(embed = e)
+
+###################################################################################
+
 if not os.environ.get('TOKEN'):
         print("No token found REEEE!")
 bot.run(os.environ.get('TOKEN').strip('\"'))

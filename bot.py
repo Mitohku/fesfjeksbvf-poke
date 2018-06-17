@@ -589,9 +589,63 @@ async def badges(ctx, *, member: discord.Member = None):
 	await ctx.send(embed=e)
 
 ###################################################################################
+###################################################################################
+###																				###
+###																				###
+###								   CUSTOM EMBEDS  								###
+###																				###
+###																				###
+###################################################################################
+###################################################################################
+
+@bot.command()
+async def erules(ctx):
+
+	e = discord.Embed(colour = discord.Colour(0x7289DA))
+
+	guild = ctx.guild
+	avi = guild.icon_url
+	e.set_thumbnail(url = avi)
+	e.set_author(name = Welcome to Pokémon Universe, icon_url = avi)
+
+	await ctx.send(embed = e)
+
+###################################################################################
 
 if not os.environ.get('TOKEN'):
         print("No token found REEEE!")
 bot.run(os.environ.get('TOKEN').strip('\"'))
 
 #https://discordapp.com/oauth2/authorize/?permissions=2138569983&scope=bot&client_id=448885364275281931
+
+#1. No need for personal attacks. If you have a problem with someone contact one of the Admins/Head Admins, we will help you.
+
+#2. Spam of any kind will not be tolerated and may result in a server mute.
+
+#3. No NSFW content.
+
+#4. Don't impersonate the bot or other players.
+
+#5. Don't use commands other than p!catch in #discussions.
+
+#6. Try to keep swearing to a minimum in #general, some swearing will be tolerated but try not to. :)
+
+#7. Don't advertise your servers in chat or in DMs (3 day mute in the server, if repeated you will be banned - DM advertising = ban)
+
+#8. #bug-reports and #suggestions are not for having conversations or using the bot commands, they're for bug reports and suggestions.
+
+#9. No racial slurs.
+
+#10. Don't tag @Miles or Admins unless there is an urgent issue. Try messaging a Moderator first. (AKA Bot offline) Doing so for no reason will result in a 2 hour mute.
+
+#11. Don't ask me to give you credits, spawn pokémon etc.
+
+#12. Don't joke about suicide.
+
+#13. Keep chat in English.
+
+#14. Read #faq and #updates before messaging a staff member, chances are the answer to your question is in there.
+
+#15. Do not repeatedly use a bot command for no reason.
+
+#16. Follow Discord ToS https://discordapp.com/terms

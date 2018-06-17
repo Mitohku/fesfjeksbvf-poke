@@ -605,9 +605,30 @@ async def erules(ctx):
 
 	guild = ctx.guild
 	avi = guild.icon_url
+	berry = bot.get_user(385419569558323202)
+	general = bot.get_channel(457860924515155969)
+	international = bot.get_channel(457860854017294336)
+	suggestion = bot.get_channel(449199119148253195)
+	announcement = bot.get_channel(447492742315114496)
+	faq = bot.get_channel(450039051169300500)
+
 	e.set_author(name = "Welcome to Pokémon Universe", icon_url = avi)
-	e.add_field(name = "Server Rules", value = "#1. No need for personal attacks. If you have a problem with someone contact one of the Admins/Mods, we will help you.\n#2. Spam of any kind will not be tolerated and may result in a server mute.\n#3. No NSFW content.\n#4. Don't impersonate other players.\n#5. Don't use commands other than `p!catch` and `p!info` in #general / #international-chat.\n#6. Try to keep swearing to a minimum in #general, some swearing will be tolerated but try not to. :)")
-	e.add_field(name = "ㅤ", value = "#7. Don't advertise your servers in chat or in DMs (3 day mute in the server, if repeated you will be banned - DM advertising = ban)\n#8. #suggestions is not for having conversations or using the bot commands, it's for suggestions.\n#9. No racial slurs.\n#10. Don't tag @Strawberry ♥#0001 or Admins unless there is an urgent issue. Try messaging a Moderator first. Doing so for no reason will result in a 2 hour mute.\n#11. Try not to beg for credits/redeems/pokemons.\n#12. Don't joke about suicide.\n#13. Keep chat in English or use #international-chat.\n#14. Read #faq and #announcements before messaging a staff member, chances are the answer to your question is in there.\n#15. Do not repeatedly use a bot command for no reason.\n#16. Follow Discord [Terms of Service](https://discordapp.com/terms) and [Community Guidelines](https://discordapp.com/guidelines)")
+	e.add_field(name = "Server Rules", value = "#1. No need for personal attacks. If you have a problem with someone contact one of the Admins/Mods, we will help you.")
+	e.add_field(name = "ㅤ", value = "#2. Spam of any kind will not be tolerated and may result in a server mute.")
+	e.add_field(name = "ㅤ", value = "#3. No NSFW content.")
+	e.add_field(name = "ㅤ", value = "#4. Don't impersonate other players.")
+	e.add_field(name = "ㅤ", value = f"#5. Don't use commands other than `p!catch` and `p!info` in {general.mention} or {international.mention}.")
+	e.add_field(name = "ㅤ", value = f"#6. Try to keep swearing to a minimum in {general.mention}, some swearing will be tolerated but try not to.")
+	e.add_field(name = "ㅤ", value = "#7. Don't advertise your servers in chat or in DMs *(3 day mute in the server, if repeated you will be banned - DM advertising = ban)*")
+	e.add_field(name = "ㅤ", value = f"#8. {suggestion.mention} is not for having conversations or using the bot commands, it's for suggestions, use the correct channels.")
+	e.add_field(name = "ㅤ", value = "#9. No racial slurs.")
+	e.add_field(name = "ㅤ", value = f"#10. Don't tag {berry.mention} or Admins unless there is an urgent issue. Try messaging a Moderator first. Doing so for no reason will result in a 2 hour mute.")
+	e.add_field(name = "ㅤ", value = "#11. Try not to beg for credits/redeems/pokemons.")
+	e.add_field(name = "ㅤ", value = "#12. Don't joke about suicide.")
+	e.add_field(name = "ㅤ", value = f"#13. Keep chat in English or use {international.mention}.")
+	e.add_field(name = "ㅤ", value = f"#14. Read {faq.mention} and {announcement.mention} before messaging a staff member, chances are the answer to your question is in there.")
+	e.add_field(name = "ㅤ", value = "#15. Do not repeatedly use a bot command for no reason.")
+	e.add_field(name = "ㅤ", value = "#16. Follow Discord [Terms of Service](https://discordapp.com/terms) and [Community Guidelines](https://discordapp.com/guidelines)")
 
 	await ctx.send(embed = e)
 

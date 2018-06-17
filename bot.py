@@ -605,8 +605,8 @@ async def erules(ctx):
 
 	guild = ctx.guild
 	avi = guild.icon_url
-	e.set_thumbnail(url = avi)
 	e.set_author(name = "Welcome to Pokémon Universe", icon_url = avi)
+	e.add_field(name = "Server Rules", value = "#1. No need for personal attacks. If you have a problem with someone contact one of the Admins/Mods, we will help you.\n#2. Spam of any kind will not be tolerated and may result in a server mute.\n#3. No NSFW content.\n#4. Don't impersonate other players.\n#5. Don't use commands other than `p!catch` and `p!info` in #general / #international-chat.\n#6. Try to keep swearing to a minimum in #general, some swearing will be tolerated but try not to. :)\n#7. Don't advertise your servers in chat or in DMs (3 day mute in the server, if repeated you will be banned - DM advertising = ban)\n#8. #suggestions is not for having conversations or using the bot commands, it's for suggestions.\n#9. No racial slurs.\n#10. Don't tag @Strawberry ♥#0001 or Admins unless there is an urgent issue. Try messaging a Moderator first. Doing so for no reason will result in a 2 hour mute.\n#11. Try not to beg for credits/redeems/pokemons.\n#12. Don't joke about suicide.\n#13. Keep chat in English or use #international-chat.\n#14. Read #faq and #announcements before messaging a staff member, chances are the answer to your question is in there.\n#15. Do not repeatedly use a bot command for no reason.\n#16. Follow Discord [Terms of Service](https://discordapp.com/terms) and [Community Guidelines](https://discordapp.com/guidelines)")
 
 	await ctx.send(embed = e)
 
@@ -617,35 +617,3 @@ if not os.environ.get('TOKEN'):
 bot.run(os.environ.get('TOKEN').strip('\"'))
 
 #https://discordapp.com/oauth2/authorize/?permissions=2138569983&scope=bot&client_id=448885364275281931
-
-#1. No need for personal attacks. If you have a problem with someone contact one of the Admins/Head Admins, we will help you.
-
-#2. Spam of any kind will not be tolerated and may result in a server mute.
-
-#3. No NSFW content.
-
-#4. Don't impersonate the bot or other players.
-
-#5. Don't use commands other than p!catch in #discussions.
-
-#6. Try to keep swearing to a minimum in #general, some swearing will be tolerated but try not to. :)
-
-#7. Don't advertise your servers in chat or in DMs (3 day mute in the server, if repeated you will be banned - DM advertising = ban)
-
-#8. #bug-reports and #suggestions are not for having conversations or using the bot commands, they're for bug reports and suggestions.
-
-#9. No racial slurs.
-
-#10. Don't tag @Miles or Admins unless there is an urgent issue. Try messaging a Moderator first. (AKA Bot offline) Doing so for no reason will result in a 2 hour mute.
-
-#11. Don't ask me to give you credits, spawn pokémon etc.
-
-#12. Don't joke about suicide.
-
-#13. Keep chat in English.
-
-#14. Read #faq and #updates before messaging a staff member, chances are the answer to your question is in there.
-
-#15. Do not repeatedly use a bot command for no reason.
-
-#16. Follow Discord ToS https://discordapp.com/terms

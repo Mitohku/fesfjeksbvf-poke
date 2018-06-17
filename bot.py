@@ -660,9 +660,44 @@ async def eroles(ctx):
 	e.description= "If you want a role, just click the correct emoji dedicated to that role you'd like to have to assign it to yourself.\nIf you would like to take it off, just click the emoji again to remove it!"
 	e.add_field(name="Leveled Roles", value=f"Those are automatically assigned by {mee.mention} when you meet the correct level.", inline=False)
 	e.add_field(name="Other Roles", value=f"Those are assigned by Gym Leaders/Elite Fours using {poke.mention} when you beat their arena.", inline=False)
-	e.set_footer(text = "Custom Roles can be bought by donating at least 1€.")
+	e.set_footer(text = "Custom Roles can be bought by donating at least 1$.")
 
 	await ctx.send(embed = e)
+
+###################################################################################
+
+@bot.command()
+async def efaq(ctx):
+
+	e = discord.Embed(colour = discord.Colour(0x7289DA))
+	e2 = discord.Embed(colour = discord.Colour(0x7289DA))
+
+	guild = ctx.guild
+	avi = guild.icon_url
+	poke = bot.get_user(448885364275281931)
+	rules = bot.get_channel(447493465241026560)
+	role = bot.get_channel(449199056154263552)
+	announcement = bot.get_channel(447492742315114496)
+
+	e.set_author(name = "Donations", icon_url = avi)
+	e.add_field(name="Why would I donate?", value=f"Donating supports the server but also the developement of {poke.mention}. But you also get perks: 250 credits for each 25 cents donated! Also, you get a special role that only donators have and a custom role if you donate 1$ or more.", inline=False)
+	e.add_field(name="Where can I donate?", value="You can donate through PayPal with the link provided by `p!donation`.", inline=False)
+
+	e2.set_author(name = "Others", icon_url = avi)
+	e2.add_field(name="IVs and Pokemon Stats", value="IVs now can be seen with `p!detailed` and then `p!info`. IVs are individual values of each unique pokemon and they do not change through levels. They are used to calculate the final stats of each pokemon. They range from 0-31.", inline=False)
+	e2.add_field(name="Can I be unmuted please?", value="If you're muted it's for a reason nah? If not, prove it. So... No.", inline=False)
+	e2.add_field(name="Can I message Admins privately?", value="Yes. But please, only do when its absolutely important. You are not the only one who thought of messaging an admin/mod to joke around. We don't wanna get tons of messages as after some point it gets annoying.", inline=False)
+	e2.add_field(name="This person is catching all the pokemon! They are using copy-pasting to catch! We can't catch pokemon when they are here.", value="What do you expect us to do? It's all fair game. Just do what they are doing if you are so desperate to catch pokemon.", inline=False)
+	e2.add_field(name="Can you spawn a pokemon?", value="No we can't, sorry.. ^^'", inline=False)
+	e2.add_field(name="Can you give me a pokemon?", value=f"Read the {rules.mention}, no begging.", inline=False)
+	e2.add_field(name="When are you gonna do giveaways?", value="When the server hits major membercounts for example, hitting 100 players.", inline=False)
+	e2.add_field(name="Where's the spam/NSFW channel?", value="Nowhere. Spamming and NSFW is not allowed in the server in any channel. If you wanna see NSFW things there are webpages for that.", inline=False)
+	e2.add_field(name="How much is <pokemon> worth?", value="There are no set prices. The prices vary depending on how many people want the pokemon and how strong it is. You decide how much a pokemon is worth following market prices. Not admins.", inline=False)
+	e2.add_field(name="How do I make my own team?", value=f"We are not accepting any new teams at the moment. Please join the already existing ones. You can find them in {role.mention}.", inline=False)
+	e2.add_field(name="How can we be recruited?", value=f"When we need new staffs, we post a Google Document (to fill in) in {announcement.mention}, you must be active and fill this Document seriously with developed answers ", inline=False)
+
+	await ctx.send(embed = e)
+	await ctx.send(embed = e2)
 
 ###################################################################################
 

@@ -634,13 +634,12 @@ async def erules(ctx):
 	e.add_field(name = "ㅤ", value = "**#15.** Do not repeatedly use a bot command for no reason.", inline=False)
 	e.add_field(name = "ㅤ", value = f"**#16.** Don't use `p!info <pokemon>` in general use {pokemon.mention} please.", inline=False)
 	e.add_field(name = "ㅤ", value = "**#17.** Follow Discord [Terms of Service](https://discordapp.com/terms) and [Community Guidelines](https://discordapp.com/guidelines)", inline=False)
-	e.set_footer(text = "If a rule is broken and no Admins or Moderators see it, please mention a Moderator.")
 
 	e2.add_field(name = "Trading Rules", value = "**1.** As it is easy to guess, scamming is forbidden.", inline=False)
 	e2.add_field(name = "ㅤ", value = f"**#2.** Use {trading1.mention} and {trading2.mention} only to advertise your offers.", inline=False)
 	e2.add_field(name = "ㅤ", value = "**#3.** If your trading message is considered too long a mod may warn you for it, and if repeated you will be muted.", inline=False)
 	e2.add_field(name = "ㅤ", value = "**#4.** Posting more than ONE trading message per minute will result in a mute/warn.", inline=False)
-	e2.set_footer(text = "If a rule is broken and no Admins or Moderators see it, please mention a Moderator.")
+	e2.set_footer(text = "If a rule is broken and no Admins or Moderators see it, please mention a Moderator.", icon_url=avi)
 
 	await ctx.send(embed = e)
 	await ctx.send(embed = e2)

@@ -83,7 +83,7 @@ async def on_ready():
 ###################################################################################
 
 @bot.command(aliases = ['cmds', 'commands'], description = 'Sends a message with commands in DM')
-async def help(ctx):
+async def helpme(ctx):
 
 	developer = bot.get_user(385419569558323202) # commands.get_user(commands.owner_id)
 

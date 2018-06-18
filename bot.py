@@ -40,30 +40,30 @@ mahogany = []
 blackthorn = []
 laverre = [385419569558323202]
 
-pewter2 = [385419569558323202, 307219837648764928]
-cerulean2 = [385419569558323202, 307219837648764928]
-vermilion2 = [385419569558323202, 307219837648764928]
-celadon2 = [385419569558323202, 307219837648764928]
-fuschia2 = [385419569558323202, 307219837648764928]
-saffron2 = [385419569558323202, 307219837648764928]
-cinnabar2 = [385419569558323202, 307219837648764928]
-viridian2 = [385419569558323202, 307219837648764928]
-violet2 = [385419569558323202, 307219837648764928]
-azalea2 = [385419569558323202, 307219837648764928]
-goldenrod2 = [385419569558323202, 307219837648764928]
-ecruteak2 = [385419569558323202, 307219837648764928]
-cianwood2 = [385419569558323202, 307219837648764928]
-olivine2 = [385419569558323202, 307219837648764928]
-mahogany2 = [385419569558323202, 307219837648764928]
-blackthorn2 = [385419569558323202, 307219837648764928]
-laverre2 = [385419569558323202, 307219837648764928]
+pewter2 = [385419569558323202, 307219837648764928, 332892224738295808]
+cerulean2 = [385419569558323202, 307219837648764928, 332892224738295808]
+vermilion2 = [385419569558323202, 307219837648764928, 332892224738295808]
+celadon2 = [385419569558323202, 307219837648764928, 332892224738295808]
+fuschia2 = [385419569558323202, 307219837648764928, 332892224738295808]
+saffron2 = [385419569558323202, 307219837648764928, 332892224738295808]
+cinnabar2 = [385419569558323202, 307219837648764928, 332892224738295808]
+viridian2 = [385419569558323202, 307219837648764928, 332892224738295808]
+violet2 = [385419569558323202, 307219837648764928, 332892224738295808]
+azalea2 = [385419569558323202, 307219837648764928, 332892224738295808]
+goldenrod2 = [385419569558323202, 307219837648764928, 332892224738295808]
+ecruteak2 = [385419569558323202, 307219837648764928, 332892224738295808]
+cianwood2 = [385419569558323202, 307219837648764928, 332892224738295808]
+olivine2 = [385419569558323202, 307219837648764928, 332892224738295808]
+mahogany2 = [385419569558323202, 307219837648764928, 332892224738295808]
+blackthorn2 = [385419569558323202, 307219837648764928, 332892224738295808]
+laverre2 = [385419569558323202, 307219837648764928, 332892224738295808]
 
 elite = [220231135949619200, 247166156467732482, 333204266309255168, 349989345714896906] 
 elitelead = [385419569558323202] 
 
-started = [385419569558323202]
-master = [385419569558323202]
-comp = [385419569558323202] 
+started = [385419569558323202, 332892224738295808]
+master = [385419569558323202, 332892224738295808]
+comp = [385419569558323202, 332892224738295808] 
 	
 @bot.event
 async def on_ready():
@@ -95,15 +95,15 @@ async def help(ctx):
 	embed = discord.Embed(colour = discord.Colour(0xA522B3))
 	embed.set_thumbnail(url = avi)
 	embed.set_author(name = developer, icon_url = avi)
-	embed.description = f"Hi everyone! I'm **{developer.name}**, the creator of **Pokéberry🍓** <:bot:389862148395761664> \nI started making that bot in <:pythonbot:392172368023388160> but I'm also a web designer & designer. \nI wanted to make this BOT because for each arenas we need to get a badge if we complete it."
-	embed.add_field(name="Having Issues/Problems?", value=f"If you have any problems with **Pokéberry🍓** <:bot:389862148395761664>,\njust contact the Bot Developper **{developer.name}**", inline=False)
+	embed.description = f"Hi everyone! I'm **{developer.name}**, the creator of **Pokéberry🍓** <:bot:453635744960086026> \nI started making that bot in <:Python:453634265197051934> but I'm also a web designer & designer. \nI wanted to make this BOT because for each arenas we need to get a badge if we complete it."
+	embed.add_field(name="Having Issues/Problems?", value=f"If you have any problems with **Pokéberry🍓** <:bot:453635744960086026>,\njust contact the Bot Developper **{developer.name}**", inline=False)
 
 	help1 = discord.Embed(colour = discord.Colour(0xA522B3))
-	help1.title = f"Pokéberry🍓  Commands List🍓"
-	help1.description = f"**Pokéberry🍓** <:bot:389862148395761664>'s prefix is **p.**\nNeed more informations about a command? `p.help [command]`\n\n"
-	help1.add_field(name="Core Commands", value="`p.help` **|** `p.setgame`", inline=False)
-	help1.add_field(name="Utility Commands", value="`p.ping` **|** `p.badges` **|** `p.about` **|** `p.stats` **|** `p.complete`", inline=False)
-	help1.add_field(name="Fun Commands", value="`p.snowball` **|** `p.sb`", inline=False)
+	help1.title = f"Pokéberry🍓  Commands List"
+	help1.description = f"**Pokéberry🍓** <:bot:453635744960086026>'s prefix is **p!**\nNeed more informations about a command? `p!help [command]`\n\n"
+	help1.add_field(name="Core Commands", value="`p!helpme`", inline=False)
+	help1.add_field(name="Utility Commands", value="`p!ping` **|** `p!badges` **|** `p!about` **|** `p!stats` **|** `p!leagueaccess`", inline=False)
+	help1.add_field(name="Fun Commands", value="`p!snowball`", inline=False)
 	help1.set_footer(text = "Have fun using Pokéberry🍓")
 
 	await ctx.send(embed = embed)
@@ -134,7 +134,7 @@ async def owner(ctx):
 	embed.set_thumbnail(url = avi)
 	embed.set_author(name = developer, icon_url = avi)
 
-	embed.description = f"Hi everyone! I'm **{developer.name}**, the creator of **Pokéberry🍓** <:bot:389862148395761664> \nI started making that bot in <:pythonbot:392172368023388160> but I'm also a web designer & designer. \nI wanted to make this BOT because for each arenas we need to get a badge if we complete it."
+	embed.description = f"Hi everyone! I'm **{developer.name}**, the creator of **Pokéberry🍓** <:bot:453635744960086026> \nI started making that bot in <:Python:453634265197051934> but I'm also a web designer & designer. \nI wanted to make this BOT because for each arenas we need to get a badge if we complete it."
 
 	await ctx.send(embed = embed)
 
@@ -148,14 +148,23 @@ async def owner(ctx):
 ###################################################################################
 ###################################################################################
 
-@bot.command(aliases = ['ms'])
-async def ping(ctx):
-		pingms = "{}".format(int(bot.latency * 1000)) #MS
-
-		ping1 = discord.Embed(colour = discord.Colour(0xA522B3))
-		ping1.description = f"My latency is actually **{pingms}ms**."
-		ping1.set_footer(text = time.strftime("%d/%m/%Y - %I:%M:%S %p"))
-		await ctx.send(embed = ping1)
+@bot.command(aliases = ['ping', 'ms'])
+async def latency(ctx):
+	pingms = "{}".format(int(ctx.bot.latency * 1000))
+	message = await ctx.send("Ping - Calculating connection.")
+	await message.edit(content = f"Ping - Calculating connection..")
+	await asyncio.sleep(0.50)
+	await message.edit(content = f"Ping - Calculating connection...")
+	await asyncio.sleep(0.50)
+	await message.edit(content = f"Ping - Calculating connection....")
+	await asyncio.sleep(0.50)
+	await message.edit(content = f"Ping - Calculating connection.")
+	await asyncio.sleep(0.50)
+	await message.edit(content = f"Ping - Calculating connection..")
+	await asyncio.sleep(0.50)
+	await message.edit(content = f"Ping - Calculating connection...")
+	await asyncio.sleep(1.50)
+	await message.edit(content = f"Pong! - My latency is **{pingms}**ms")
 
 ###################################################################################
 ###################################################################################
@@ -699,6 +708,95 @@ async def efaq(ctx):
 
 	await ctx.send(embed = e)
 	await ctx.send(embed = e2)
+
+###################################################################################
+###################################################################################
+###																				###
+###																				###
+###								   BOT/SERVER STATS  							###
+###																				###
+###																				###
+###################################################################################
+###################################################################################
+
+@bot.command(aliases = ['stats'])
+async def about(self):
+    stat1 = discord.Embed(colour = discord.Colour(0xE4D7FF))
+    servers = len(bot.guilds)
+    members=0
+    for guild in bot.guilds:
+        members+=len(guild.members)
+    total_online = len({m.id for m in self.bot.get_all_members() if m.status is not discord.Status.offline})
+    total_unique = len(self.bot.users)
+    total_bots = len([m.id for m in self.bot.get_all_members() if m.bot])
+    categories=0
+    for guild in bot.guilds:
+        categories+=len(guild.categories)
+    channels=0
+    for guild in bot.guilds:
+        channels+=len(guild.channels)
+    texts=0
+    for guild in bot.guilds:
+        texts+=len(guild.text_channels)
+    voices=0
+    for guild in bot.guilds:
+        voices+=len(guild.voice_channels)
+
+    stat2 = bot.get_user(390478999828037632)
+
+    stat1.set_author(name= stat2)
+    stat1.add_field(name= "Members in serverㅤ", value=f"Total Users: **{members}** \nTotal Uniques: **{total_unique}** \nTotal Online: **{total_online}** \nTotal BOTS: **{total_bots}**", inline=True)
+    stat1.add_field(name= "Channels in server", value=f"Total Categories: **{categories}** \nTotal Channels: **{channels}** \nText Channels: **{texts}** \nVoice Channels: **{voices}**", inline=True)
+    stat1.add_field(name= "Program Informations", value=f"Program Language: **<:Python:453634265197051934> 3.6.3** \nDiscord Program: **Discord.py** \nProgram Version: **1.0.0a**", inline=True)
+    stat1.add_field(name= "ㅤRun/Bot Informations", value=f"ㅤRunning on: **Heroku** <:Heroku:453634258041438210>\nㅤEdited with: **Sublime Text 3** <:Sublime:453634264248877056>\n\nㅤ*More with `p!helpme` command*", inline=True)
+    await self.send(embed = stat1)
+
+###################################################################################
+###################################################################################
+###																				###
+###																				###
+###								   SNOWBALL COMMAND  							###
+###																				###
+###																				###
+###################################################################################
+###################################################################################
+
+@bot.command(aliases = ['sb'])
+async def snowball(ctx, *, member : discord.Member = None):
+
+    number = random.randint(1, 5)
+
+    if not member:
+        await ctx.send(f"**{ctx.author.name}**, maybe an option to throw it at someone!")
+    elif member is ctx.author:
+        await ctx.send(f"**{ctx.author.name}**, maybe an option to throw it at someone else!")
+    else:
+        if number == 1:
+            snowball_hit = [
+                f":snowflake: **| {ctx.author.name}**, throws a snowball in **{member.name}**'s face! *ouchh*",
+                f":snowflake: **| {ctx.author.name}**, throws a snowball in **{member.name}**'s face! *ouchh*",
+                f":snowflake: **| {ctx.author.name}**, throws a snowball in **{member.name}**'s face! *ouchh*",
+                f":snowflake: **| {ctx.author.name}**, throws an __iceball__ in **{member.name}**'s face! *ouchh... these ones hurt...*",
+                ]
+
+            choice_hit = random.choice(snowball_hit)
+            hit = discord.Embed(colour = discord.Colour(0xE4D7FF))
+            hit.description = f"{choice_hit}"
+            await ctx.send(embed = hit)
+        else:
+            snowball_miss = [
+                f":snowflake: **| {member.name}** dodged the snowball thrown by **{ctx.author.name}**!",
+                f":snowflake: **| {ctx.author.name}**, tried to throw a snowball at **{member.name}** and missed!",
+                f":snowflake: **| {ctx.author.name}**, missed and threw the snowball through a window! *Oops*",
+                f":snowflake: **| {member.name}** laughed at **{ctx.author.name}**, how can you miss me?",
+                f":snowflake: **| {ctx.author.name}** tries to use all their energy, and fell on the ground! *definitely a miss*",
+                f":snowflake: **| {ctx.author.name}**, tried to throw an __iceball__ at **{member.name}** and missed! Lucky you, **{member.name}**!",
+                ]
+
+            choice_miss = random.choice(snowball_miss)
+            miss = discord.Embed(colour = discord.Colour(0xE4D7FF))
+            miss.description = f"{choice_miss}"
+            await ctx.send(embed = miss)
 
 ###################################################################################
 
